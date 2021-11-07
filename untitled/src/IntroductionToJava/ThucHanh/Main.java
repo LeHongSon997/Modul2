@@ -1,4 +1,4 @@
-package ThucHanh;
+package IntroductionToJava.ThucHanh;
 
 public class Main {
     public static void main(String[] args) {
