@@ -1,6 +1,6 @@
-package Accsess_SM_SP.BaiTap;
+package Accsess_SM_SP.BaiTap.BT1;
 
-import Accsess_SM_SP.BaiTap.Circle;
+import Accsess_SM_SP.BaiTap.BT1.Circle;
 
 public class TestCircle {
     public static void main(String[] args) {

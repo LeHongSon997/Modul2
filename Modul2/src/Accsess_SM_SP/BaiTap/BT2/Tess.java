@@ -1,4 +1,6 @@
-package Accsess_SM_SP.BaiTap;
+package Accsess_SM_SP.BaiTap.BT2;
+
+import Accsess_SM_SP.BaiTap.BT2.Studen;
 
 public class Tess {
     public static void main(String[] args) {

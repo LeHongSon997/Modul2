@@ -1,4 +1,4 @@
-package Accsess_SM_SP.BaiTap;
+package Accsess_SM_SP.BaiTap.BT1;
 
 public class Circle {
     double radius = 1.0;
