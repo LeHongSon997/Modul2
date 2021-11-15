@@ -54,6 +54,13 @@ public class MainNhanVien {
                 case 3:
                     ControllerNhanVien.deleteNhanVien(ControllerNhanVien.listNV);
                     break;
+                case 7:
+                    System.exit(7);
+                case 6:
+                    ControllerNhanVien.sortNhanVien(ControllerNhanVien.listNV);
+                    break;
+                case 4:
+
 
             }
         }

@@ -85,6 +85,46 @@ public class ControllerNhanVien {
         return listNV;
     }
 
+//    public static NhanVien[] editNhanVien(NhanVien[] listNV) {
+//        System.out.println("Nhập id");
+//        int id = Integer.parseInt(scanner.nextLine());
+//        System.out.println("Nhập name");
+//        String name = scanner.nextLine();
+//        System.out.println("Nhập address");
+//        String address = scanner.nextLine();
+//        System.out.println("Nhập age");
+//        int age = Integer.parseInt(scanner.nextLine());
+//        System.out.println("Nhập workingDay");
+//        double workingDay = Double.parseDouble(scanner.nextLine());
+//        System.out.println("Nhập salary");
+//        double salary = Double.parseDouble(scanner.nextLine());
+//        int index = findIndexById(listNV);
+//        NhanVien newNV = new NhanVien[listNV.length];
+//        if (index >= 0) {
+//            listNV[index].setAge(newNV.getAge());
+//            listNV[index].setName(newNV.getName());
+//            listNV[index].setAge(newNV.getAge());
+//            listNV[index].setAddress(newNV.geta());
+//            listNV[index].setName(newNV.getName());
+//
+//        }
+//        return listNV;
+//    }
+
+
+    public static NhanVien[] sortNhanVien(NhanVien[] listNV) {
+        for (int i = 0; i < listNV.length; i++) {
+            for (int j = i; j < listNV.length; j++) {
+                if(listNV[i].getName().compareTo(listNV[j].getName())>0){
+                    NhanVien temp = listNV[i];
+                    listNV[i]=listNV[j];
+                    listNV[j]=temp;
+                }
+            }
+        }
+        return listNV;
+    }
+
     public static int findIndexById(NhanVien[] listNV) {
         System.out.println("Nhập id muốn tìm");
         int id = Integer.parseInt(scanner.nextLine());
