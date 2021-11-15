@@ -60,7 +60,7 @@ public class MainNhanVien {
                     ControllerNhanVien.sortNhanVien(ControllerNhanVien.listNV);
                     break;
                 case 4:
-
+                    ControllerNhanVien.editNhanVien(ControllerNhanVien.listNV);
 
             }
         }

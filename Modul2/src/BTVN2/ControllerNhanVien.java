@@ -57,7 +57,7 @@ public class ControllerNhanVien {
     }
 
     public static void findIndexByName(NhanVien[] listNV) {
-        System.out.println("nhập ten muốn tìm");
+        System.out.println("nhập tên muốn tìm");
         String name = scanner.nextLine();
 
         for (int i = 0; i < listNV.length; i++) {
@@ -85,31 +85,26 @@ public class ControllerNhanVien {
         return listNV;
     }
 
-//    public static NhanVien[] editNhanVien(NhanVien[] listNV) {
-//        System.out.println("Nhập id");
-//        int id = Integer.parseInt(scanner.nextLine());
-//        System.out.println("Nhập name");
-//        String name = scanner.nextLine();
-//        System.out.println("Nhập address");
-//        String address = scanner.nextLine();
-//        System.out.println("Nhập age");
-//        int age = Integer.parseInt(scanner.nextLine());
-//        System.out.println("Nhập workingDay");
-//        double workingDay = Double.parseDouble(scanner.nextLine());
-//        System.out.println("Nhập salary");
-//        double salary = Double.parseDouble(scanner.nextLine());
-//        int index = findIndexById(listNV);
-//        NhanVien newNV = new NhanVien[listNV.length];
-//        if (index >= 0) {
-//            listNV[index].setAge(newNV.getAge());
-//            listNV[index].setName(newNV.getName());
-//            listNV[index].setAge(newNV.getAge());
-//            listNV[index].setAddress(newNV.geta());
-//            listNV[index].setName(newNV.getName());
-//
-//        }
-//        return listNV;
-//    }
+    public static void editNhanVien(NhanVien[] listNV) {
+        System.out.println("Nhập tên muốn sửa");
+        String name = scanner.next();
+
+        boolean check = true;
+        for (NhanVien NV : listNV) {
+            if (Objects.equals(NV.getName(), name)) {
+                if (NV instanceof KySu) {
+                    NV = createNhanVien(true);
+                }
+                else {
+                    NV = createNhanVien(false);
+                }
+                check = false;
+            }
+        }
+        if (check) {
+            System.out.println("Không tìm thấy tên muốn sửa");
+        }
+    }
 
 
     public static NhanVien[] sortNhanVien(NhanVien[] listNV) {
